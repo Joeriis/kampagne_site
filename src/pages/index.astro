@@ -1,15 +1,59 @@
 ---
+import Banner from "../components/banner.astro";
+import Logo from "../components/logo.astro";
+import Button from "../components/button.astro";
+import Ratings from "../components/ratings.astro";
+import Some from "../components/some.astro";
+import Footer from "../components/footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <section>
+      <Banner size="small" />
+      <img src="" alt="" />
+      <Logo size="small" />
+      <Button size="small" />
+    </section>
+
+    <section>
+      <h1>Det siger vores gæster</h1>
+      <p><Ratings type="star_small" /> Google</p>
+      <p><Ratings type="dot_small" /> Tripadvisor</p>
+      <p><Ratings type="truststar_small" /> Trustpilot</p>
+    </section>
+
+    <section>
+      <Ratings type="heart_small" />
+      <!-- Database testimonial 1 -->
+      <h2>-Testimonial 1</h2>
+    </section>
+
+    <section>
+      <Ratings type="heart_small" />
+      <!-- Database testimonial 2 -->
+      <h2>-Testimonial 2</h2>
+    </section>
+
+    <section>
+      <h1>Overskrift</h1>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita earum iste cumque voluptates fugit quia consequatur veniam porro ipsum consectetur quod, itaque sapiente. Nostrum autem optio soluta debitis expedita deserunt.</p>
+      <Button size="small" />
+    </section>
+
+    <section>
+      <Some type="facebook_small" />
+      <Some type="instagram_small" />
+    </section>
+
+    <footer><Footer /></footer>
+  </body>
 </html>
