@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #ffebe9;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+@font-face {
+  font-family: "Wednesday";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Wednesday.woff"), url("Wednesday.woff") format("woff");
+}
+
+h1 {
+  font-family: "Wednesday";
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.banner {
+  background-color: #f47474;
+  padding: 10px;
+  text-align: center;
+}
+
+/* overall ratings */
+.rating_flex {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.text_middle {
+  text-align: center;
+  margin-right: 10px;
+}
+.rating_img {
+  width: 100px;
+}
+.pull_up {
+  margin-top: -7px;
+  margin-left: 10px;
+}
+
+/* youtube + info */
+.info {
+  text-align: center;
+}
+.some_icons {
+  width: 50px;
+  display: flex;
+  margin: auto;
+}
+
+/* footer */
+footer {
+  background-color: #f47474;
+}
+.icons img {
+  width: 45px;
+}
+#location {
+  height: 45px;
+}
+a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 25px;
+}
+a p {
+  margin-left: 5px;
+}
+/* .pull_down {
+  margin-top: 2px;
+} */
+
+/* @media (min-width: 850px) {
+  h1 br {
+    display: none;
+  }
+} */
