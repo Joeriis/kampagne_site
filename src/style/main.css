@@ -2,8 +2,14 @@
 * {
   margin: 0;
   padding: 0;
+  /* text-align: center; */
+}
+body {
   background-color: #ffebe9;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 img {
   max-width: 100%;
@@ -16,24 +22,32 @@ img {
   src: local("Wednesday.woff"), url("Wednesday.woff") format("woff");
 }
 
+/*  */
+
 h1 {
   font-family: "Wednesday";
+  text-align: center;
 }
 p {
   font-family: "Open Sans", sans-serif;
+  text-align: left;
 }
 
 .banner {
   background-color: #f47474;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  align-items: end;
 }
 
 /* overall ratings */
 .rating_flex {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin-top: 10px;
+}
+.rating {
+  display: flex;
 }
 .text_middle {
   text-align: center;
@@ -45,16 +59,19 @@ p {
 .pull_up {
   margin-top: -7px;
   margin-left: 10px;
+  text-align: left;
 }
 
 /* youtube + info */
-.info {
-  text-align: center;
-}
 .some_icons {
   width: 50px;
   display: flex;
+  gap: 10px;
   margin: auto;
+}
+#grid1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 /* footer */
@@ -67,16 +84,21 @@ footer {
 #location {
   height: 45px;
 }
-a {
+footer a {
   display: flex;
   text-decoration: none;
   color: inherit;
   align-items: center;
-  margin: auto;
+  margin-left: 25px;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
-a p {
+footer a p {
   margin-left: 5px;
+}
+.logo {
+  width: 400px;
+  margin-left: 15px;
 }
 /* .pull_down {
   margin-top: 2px;
