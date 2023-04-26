@@ -5,6 +5,31 @@ import Button from "../components/button.astro";
 import Ratings from "../components/ratings.astro";
 import Some from "../components/some.astro";
 import Footer from "../components/footer.astro";
+import Testimony from "../components/testimony.astro";
+
+
+const testimony = await fetch(
+  "https://kazggkweotbgqavjffcg.supabase.co/rest/v1/testimonies",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imthemdna3dlb3RiZ3FhdmpmZmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI0MTk4ODksImV4cCI6MTk5Nzk5NTg4OX0.78h9mPpFAOlYI4govuES16PmVEXr-pCV87jAlxqm1Nw",
+    },
+  }
+).then((res) => res.json());
+console.log(testimony)
+
+// const testimony2 = await fetch(
+//   "https://kazggkweotbgqavjffcg.supabase.co/rest/v1/testimonies?id=eq.2",
+//   {
+//     method: "GET",
+//     headers: {
+//       apikey:
+//         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imthemdna3dlb3RiZ3FhdmpmZmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI0MTk4ODksImV4cCI6MTk5Nzk5NTg4OX0.78h9mPpFAOlYI4govuES16PmVEXr-pCV87jAlxqm1Nw",
+//     },
+//   }
+// ).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -22,7 +47,7 @@ import Footer from "../components/footer.astro";
       <Logo size="small" />
       <Button size="small" />
     </section>
-
+    
     <section>
       <h1>Det siger vores gæster</h1>
       <p><Ratings type="star_small" /> Google</p>
@@ -31,21 +56,23 @@ import Footer from "../components/footer.astro";
     </section>
 
     <section>
-      <Ratings type="heart_small" />
-      <!-- Database testimonial 1 -->
-      <h2>-Testimonial 1</h2>
-    </section>
-
-    <section>
-      <Ratings type="heart_small" />
-      <!-- Database testimonial 2 -->
-      <h2>-Testimonial 2</h2>
+    {testimony.map((res)=> <Testimony testimony={res.id} description={res.description} name={res.name}/>)}
     </section>
 
     <section>
       <h1>Overskrift</h1>
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita earum iste cumque voluptates fugit quia consequatur veniam porro ipsum consectetur quod, itaque sapiente. Nostrum autem optio soluta debitis expedita deserunt.</p>
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+      >
+      </iframe>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita earum
+        iste cumque voluptates fugit quia consequatur veniam porro ipsum
+        consectetur quod, itaque sapiente. Nostrum autem optio soluta debitis
+        expedita deserunt.
+      </p>
       <Button size="small" />
     </section>
 
