@@ -7,13 +7,18 @@ console.log(testimony);
 console.log(name);
 ---
 
-
-<div class="testimony">
-<img src="pics/hjerter.svg" alt="">
-<p>{description}</p>
-<h2 class="testname">{name}</h2>
-</div>
+<div class="grid">
+  <div class="testimony">
+    <img src="pics/hjerter.svg" alt="">
+    <p>{description}</p>
+    <h2 class="testname">{name}</h2>
+  </div>
+</div>  
 <style>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr ;
+}
 .testimony {
     margin: 40px 30px 10px 30px;
     text-align: start;
