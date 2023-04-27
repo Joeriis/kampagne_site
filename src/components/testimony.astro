@@ -1,0 +1,32 @@
+---
+const { testimony } = Astro.props;
+const { name } = Astro.props;
+const { description } = Astro.props
+const { karakter } = Astro.props ;
+console.log(testimony);
+console.log(name);
+---
+
+
+<div class="testimony">
+<img src="pics/hjerter.svg" alt="">
+<p>{description}</p>
+<h2 class="testname">{name}</h2>
+</div>
+<style>
+.testimony {
+    margin: 40px 30px 10px 30px;
+    text-align: start;
+}
+h2, p {
+    margin: 10px 0 10px 0;
+}
+
+h2 {
+  font-family: "Wednesday";
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+</style>
