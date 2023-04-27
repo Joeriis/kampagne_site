@@ -15,7 +15,6 @@ img {
 }
 
 /* font */
-
 h1 {
   font-family: "Wednesday";
 }
@@ -23,10 +22,21 @@ p {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5rem;
 }
-/* banner */ 
+/* banner */
 .banner {
   background-color: #f47474;
   text-align: center;
+}
+
+/* splash og butten */
+.bingobango {
+  position: relative;
+}
+.butto {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* rating/testimony section */
