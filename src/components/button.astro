@@ -1,7 +1,7 @@
 ---
 ---
 
-<button>Book Nu</button>
+<a href="https://www.royalescapes.dk/dk/escape-rooms/booking"><button>Book Nu</button></a>
 
 <style>
     button {
@@ -9,19 +9,22 @@
 text-align: center;
 background-color: #BB2027;
 color: white;
-padding: 7px;
-  padding-left: 10px;
-border-radius: 17px;
-padding-left: 15px;
-padding-right: 15px;
+padding: 9px;
+border-radius: 20px;
+padding-left: 20px;
+padding-right: 20px;
  border: none;
   outline: none;
   box-shadow: none;
   transition: transform 0.2s ease-in-out;
+  font-size: 2em;
     }
-
 button:hover {
   transform: scale(1.2);
 }
-
+@media (min-width: 750px) {
+button {
+    font-size: 4em; 
+}
+}
 </style>

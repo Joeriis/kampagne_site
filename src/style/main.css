@@ -26,11 +26,15 @@ p {
 .banner {
   background-color: #f47474;
   text-align: center;
+  padding: 10px;
 }
 
 /* splash og butten */
 .bingobango {
   position: relative;
+}
+.foreveaaarrth {
+  display: none;
 }
 .butto {
   position: absolute;
@@ -149,6 +153,12 @@ footer a p {
   }
 } */
 @media only screen and (min-width: 750px) {
+  .chongobongo {
+    display: none;
+  }
+  .foreveaaarrth {
+    display: block;
+  }
   #grid1 {
     flex-direction: column;
     align-self: flex-start;
