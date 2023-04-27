@@ -1,5 +1,6 @@
 ---
- import Button from "../components/button.astro";
+import Button from "../components/button.astro";
+import Testimony from "../components/testimony.astro";
 
  const testimony = await fetch(
   "https://kazggkweotbgqavjffcg.supabase.co/rest/v1/testimonies",
@@ -9,6 +10,7 @@
       apikey:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imthemdna3dlb3RiZ3FhdmpmZmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI0MTk4ODksImV4cCI6MTk5Nzk5NTg4OX0.78h9mPpFAOlYI4govuES16PmVEXr-pCV87jAlxqm1Nw",
     },
+
   }
 ).then((res) => res.json());
 console.log(testimony)
@@ -46,10 +48,7 @@ console.log(testimony)
       </div>
       <div id="grid2">
         <div>
-          <h2>testimony 1</h2>
-        </div>
-        <div>
-          <h2> testimony 2 </h2>
+          {testimony.map((res)=> <Testimony testimony={res.id} description={res.description} name={res.name} karakter={res.karakter}/>)}
         </div>
       </div>
     </section>
@@ -82,3 +81,21 @@ console.log(testimony)
     </footer>
   </body>
 </html>
+
+/* import Testimony from "../components/testimony.astro";
+
+const { testimony } = Astro.props;
+const { name } = Astro.props;
+const { description } = Astro.props
+const { karakter } = Astro.props ;
+console.log(testimony);
+console.log(name);
+
+<img src="" alt="">
+<h1>Testimony{testimony}</h1>
+<h2>{karakter}</h2>
+<p>{description}</p>
+<h2 class="testname">{name}</h2>
+
+{testimony.map((res)=> <Testimony testimony={res.id} description={res.description} name={res.name} karakter={res.karakter}/>)}
+*/
