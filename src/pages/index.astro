@@ -1,5 +1,17 @@
 ---
  import Button from "../components/button.astro";
+
+ const testimony = await fetch(
+  "https://kazggkweotbgqavjffcg.supabase.co/rest/v1/testimonies",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imthemdna3dlb3RiZ3FhdmpmZmNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODI0MTk4ODksImV4cCI6MTk5Nzk5NTg4OX0.78h9mPpFAOlYI4govuES16PmVEXr-pCV87jAlxqm1Nw",
+    },
+  }
+).then((res) => res.json());
+console.log(testimony)
 ---
 
 <html lang="en">
