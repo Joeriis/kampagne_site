@@ -21,6 +21,7 @@ h1 {
 }
 p {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
 }
 /* banner */ 
 .banner {
@@ -60,7 +61,7 @@ p {
 #grid1 {
   display: flex;
   grid-template-columns: 1fr 1fr;
-  margin: 20px;
+  margin: 40px 20px 40px 20px;
 }
 .tekst {
   text-align: start;
