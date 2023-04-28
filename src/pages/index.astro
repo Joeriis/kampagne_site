@@ -49,10 +49,10 @@ console.log(testimony)
           </div>
         </div>
       </div>
-      <div id="grid2">
-        <div>
+      <div class="scrolling-wrapper">
+      <div class="card">
           {testimony.map((res)=> <Testimony testimony={res.id} description={res.description} name={res.name} karakter={res.karakter}/>)}
-        </div>
+      </div>
       </div>
     </section>
 

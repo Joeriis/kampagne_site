@@ -5,29 +5,34 @@ const { description } = Astro.props
 const { karakter } = Astro.props ;
 console.log(testimony);
 console.log(name);
+console.log(description);
 ---
 
-<div class="grid">
   <div class="testimony">
     <img src="pics/hjerter.svg" alt="">
-    <p>{description}</p>
-    <h2 class="testname">{name}</h2>
-  </div>
-</div>  
+    <div class="text">
+      <p>{description}</p>
+      <h3 class="testname">{name}</h3>
+    </div>
+  </div> 
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: 1fr ;
+
+.text {
+  white-space: normal;
 }
 .testimony {
-    margin: 40px 30px 10px 30px;
-    text-align: start;
+    width: 350px;
+    height: 300px;
+    border-radius: 25px;
+    margin-inline: 4px;
+    display: inline-block;
+    background-color: #efa1a1;
 }
-h2, p {
+h3, p {
     margin: 10px 0 10px 0;
 }
 
-h2 {
+h3 {
   font-family: "Wednesday";
 }
 p {
