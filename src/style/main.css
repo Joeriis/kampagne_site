@@ -5,6 +5,7 @@
 }
 body {
   background-color: #ffebe9;
+  overflow-x: hidden;
 }
 main {
   text-align: center;
@@ -75,7 +76,6 @@ p {
 }
 #grid1 {
   display: flex;
-  margin: auto;
   padding-top: 30px;
   flex-direction: column;
   align-self: flex-start;
@@ -102,6 +102,7 @@ p {
   max-width: 1074px;
   position: relative;
   margin-inline: auto;
+  margin-top: 50px;
 }
 
 
@@ -149,6 +150,7 @@ grid-template-columns: repeat(6, calc(50% - 40px));*/
 
 /* footer */
 footer {
+  display: flex;
   background-color: #f47474;
   padding-top: 20px;
 }
@@ -172,7 +174,8 @@ footer a p {
 }
 .logo {
   width: 400px;
-  margin-left: 15px;
+  margin-left: 50px;
+
 }
 /* .pull_down {
   margin-top: 2px;
